@@ -11,6 +11,15 @@ module Tokenicity
       test 'macro is defined' do
         assert_respond_to(klass, :has_token_for)
       end
+
+      test 'has_token_for defines token instance methods' do
+        klass.has_token_for(:login)
+
+        instance = klass.new
+
+        assert_respond_to(instance, :login_token)
+        assert_respond_to(instance, :verify_login_token)
+      end
     end
   end
 end
