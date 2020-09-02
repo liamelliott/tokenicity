@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version     = Tokenicity::VERSION
   spec.authors     = ["Liam Elliott"]
   spec.email       = ["liamelliott1123@gmail.com"]
-  spec.homepage    = "git@github.com:liamelliott/tokenicity.git"
+  spec.homepage    = "https://github.com/liamelliott/tokenicity"
   spec.summary     = "Makes authenticating rails models with tokens a breeze."
   spec.description = "Adds macro to activerecord models to easily add token authentication for model actions."
   spec.license     = "MIT"
