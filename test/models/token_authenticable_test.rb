@@ -1,5 +1,4 @@
 require 'test_helper'
-require_relative '../../lib/tokenicity/models/token_authenticable'
 
 module Tokenicity
   module Models
