@@ -3,7 +3,7 @@ module Tokenicity
     module TokenAuthenticable
       extend ActiveSupport::Concern
 
-      InstanceMethods = lambda do |name|
+      InstanceMethods = lambda do |name, **options|
         Module.new do
           define_method(:"#{name}_token") do
           end
@@ -15,7 +15,7 @@ module Tokenicity
 
       class_methods do
         def has_token_for(name, **options)
-          include InstanceMethods[name]
+          include InstanceMethods[name, **options]
         end
       end
     end
